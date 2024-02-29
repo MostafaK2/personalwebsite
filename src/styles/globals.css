@@ -38,6 +38,10 @@ body {
   
 }
 
+.height-screen-vh {
+  height: 50vh;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

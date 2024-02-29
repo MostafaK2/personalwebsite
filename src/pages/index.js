@@ -8,6 +8,9 @@ import {Avatar} from "@nextui-org/react";
 
 import {motion} from "framer-motion";
 
+// components
+import About from "@/components/About";
+
 
 
 // assets
@@ -79,6 +82,7 @@ const ExperienceData = [
     technologies: []
   }
 ];
+import {Tabs, Tab} from "@nextui-org/react";
 
 export default function Home() {
   return (
@@ -88,6 +92,7 @@ export default function Home() {
             <p>Mostafa Kamal</p>
           </NavbarBrand>
           <NavbarContent className="hidden sm:flex gap-4" justify="center">
+            
             <NavbarItem>
               <Link href="#">
                 About Me
@@ -106,7 +111,7 @@ export default function Home() {
             </NavbarItem>
 
             <NavbarItem>
-              <Link href="#">
+              <Link href="#contact">
                 Contact
               </Link>
             </NavbarItem>
@@ -119,7 +124,8 @@ export default function Home() {
             </NavbarItem>
           </NavbarContent>
         </Navbar>
-
+        <About/>
+        {/* project section start */}
         <h2 id="projects" className="font-bold text-2xl py-20 text-center">Projects</h2>
         <div className="w-2/3 card-parent gap-10 mx-auto">
           {projectList.map((item, index) => {
@@ -157,9 +163,10 @@ export default function Home() {
               </div>
           )})}
         </div>
-
+        {/* end of project section */}
+        {/* {experience section} */}
         <h2 id="experience" className="font-bold text-2xl py-20 text-center">Experience</h2>
-        <div>
+        <div className="w-full gap-10 mx-auto">
           {ExperienceData.map((item, index) => {
             return (
               <div className="w-2/3 mx-auto">
@@ -186,7 +193,7 @@ export default function Home() {
             )
           })}
         </div>
+        {/* end of experience section */}
     </main>
-    
   );
 }
