@@ -17,13 +17,25 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+
+.card-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-child{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
 }
 
 @layer utilities {
