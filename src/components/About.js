@@ -1,14 +1,42 @@
-
+import {motion} from "framer-motion";
 import { Avatar, Button, Divider, Link, link } from "@nextui-org/react"
 
 export default function About(){
-       
-   
+    const title = "Hi, I'm Mostafa Kamal".split("");
+    const subTitle = "I'm a Masters student".split("")
     return (
         <div className="increase-width my-10 w-2/3 mx-auto flex flex-col justify-center items-center height-screen-vh gap-7">
             <div className="flex flex-col gap-7">
-                <h1 className="text-6xl font-black about-title">Hi, I'm Mostafa Kamal</h1>
-                <h2 className="text-3xl font-medium">I'm a Masters Student</h2>
+                <h1 className="text-6xl font-black about-title">
+                    {title.map((el, i) => (
+                        <motion.span
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                duration: 0.25,
+                                delay: i / 10
+                            }}
+                            key={i}
+                        >
+                            {el}{""}
+                        </motion.span>
+                    ))}
+                </h1>
+                <h2 className="text-3xl font-medium">
+                    {subTitle.map((el, i) => (
+                        <motion.span
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{
+                                duration: 0.25,
+                                delay: i / 10
+                            }}
+                            key={i}
+                        >
+                            {el}{""}
+                        </motion.span>
+                    ))}
+                </h2>
                 <p className="text-lg">lorem eiusmod exercitation do ea amet ad nostrud. 
                     Lorem laborum dolor sint esse. Est reprehenderit ullamco pariatur et magna pariatur quis tempor. 
                     Reprehenderit culpa enim ut sunt excepteur id. Tempor velit nisi est et exercitation laboris enim

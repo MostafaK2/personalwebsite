@@ -156,7 +156,10 @@ export default function Home() {
                   </div>
                   <div className="flex flex-wrap gap-2 pt-3">
                     {item.technologies.map(item => (
-                      <Chip>{item}</Chip>
+                      <motion.div whileHover={{ scale: 1.1}} >
+                        <Chip className="cursor-pointer">{item}</Chip>
+                      </motion.div>
+                      
                     ))}
                   </div>
                 </div>
