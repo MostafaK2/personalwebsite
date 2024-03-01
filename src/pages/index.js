@@ -127,14 +127,14 @@ export default function Home() {
         <About/>
         {/* project section start */}
         <h2 id="projects" className="font-bold text-2xl py-20 text-center">Projects</h2>
-        <div className="w-2/3 card-parent gap-10 mx-auto">
+        <div className="w-2/3 increase-width card-parent gap-10 mx-auto">
           {projectList.map((item, index) => {
 
             return (
               <div className="card-child">
                 <motion.div whileHover={{ scale: 1.1, rotate: 2 }} whileTap={{scale:0.95, rotate:0}}>
                   <Card className="cursor-pointer bg-gray-200 pt-6 px-6 max-h-80">
-                    <CardBody className="overflow-visible py-2">
+                    <CardBody className="overflow-visible py-0">
                       <Image
                             alt="Card background"
                             className="mb-0 w-fullobject-cover rounded-xl"
@@ -145,7 +145,7 @@ export default function Home() {
                 </motion.div>
                 <div>
                   <div className="flex flex-row gap-4 justify-between">
-                    <h4 className="font-bold text-large">{item.title}</h4>
+                    <h4 className="font-bold text-lg project-title">{item.title}</h4>
                     <Divider className="my-4 w-1/2" />
                     <Link isExternal href={item.githubLink}> 
                       <Avatar isBordered className="cursor-pointer" name="git" src="/githublogo.svg"></Avatar>
@@ -166,10 +166,10 @@ export default function Home() {
         {/* end of project section */}
         {/* {experience section} */}
         <h2 id="experience" className="font-bold text-2xl py-20 text-center">Experience</h2>
-        <div className="w-full gap-10 mx-auto">
+        <div className="w-2/3 gap-11 mx-auto increase-width">
           {ExperienceData.map((item, index) => {
             return (
-              <div className="w-2/3 mx-auto">
+              <div className="mx-auto">
                 <div className="flex flex-row justify-between">
                   <p className="font-bold text-lg">{item.company_name}</p>
                   <p className="font-bold text-lg">{item.start_date} - {item.end_date}</p>

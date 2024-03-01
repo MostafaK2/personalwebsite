@@ -47,3 +47,49 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Resoponsive shit */
+@media screen and (max-width: 1024px) {
+  /* project section */
+  .project-title {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .height-screen-vh{
+    height: 60vh;
+  }
+
+}
+@media screen and (max-width: 900px) {
+  /* About Us Section */
+  .about-title{
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* About Us Section */
+    .about-title{
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+    .height-screen-vh{
+      height: 70vh;
+    }
+  
+  /* project section */
+  .card-parent{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* everything */
+  .increase-width{
+    width: 85%;
+  }
+
+  
+}
