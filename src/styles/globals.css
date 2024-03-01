@@ -83,3 +83,32 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  /* About Us Section */
+    .about-title{
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+  
+  /* project section */
+  .card-parent{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* everything */
+  .increase-width{
+    width: 85%;
+  }
+
+  .decrease-margin {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 400px ) {
+  .increase-width{
+    width: 95%;
+    min-width: 300px;
+  }
+}
