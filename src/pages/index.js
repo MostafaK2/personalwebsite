@@ -87,8 +87,8 @@ import {Tabs, Tab} from "@nextui-org/react";
 export default function Home() {
   return (
     <main className="mx-12 my-8 flex flex-col item-center justify-center">
-        <Navbar>
-          <NavbarBrand shouldHideOnScroll>
+        <Navbar shouldHideOnScroll>
+          <NavbarBrand >
             <p>Mostafa Kamal</p>
           </NavbarBrand>
           <NavbarContent className="hidden sm:flex gap-4" justify="center">

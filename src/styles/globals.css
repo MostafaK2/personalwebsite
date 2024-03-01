@@ -38,9 +38,6 @@ body {
   
 }
 
-.height-screen-vh {
-  height: 50vh;
-}
 
 @layer utilities {
   .text-balance {
@@ -56,9 +53,6 @@ body {
     line-height: 1.5rem;
   }
 
-  .height-screen-vh{
-    height: 60vh;
-  }
 
 }
 @media screen and (max-width: 900px) {
@@ -76,9 +70,6 @@ body {
       font-size: 2.25rem;
       line-height: 2.5rem;
     }
-    .height-screen-vh{
-      height: 70vh;
-    }
   
   /* project section */
   .card-parent{
@@ -90,6 +81,5 @@ body {
   .increase-width{
     width: 85%;
   }
-
-  
 }
+
