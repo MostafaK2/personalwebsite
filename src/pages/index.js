@@ -7,6 +7,7 @@ import ProjectCard from "@/components/ProjectCard";
 import About from "@/components/About";
 import { useRef } from "react";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 const projectList = [
   {
@@ -82,10 +83,8 @@ function Home() {
       <NavBar aboutRef={aboutRef} projectsRef={projectsRef}experienceRef={experienceRef} contactRef={contactRef}/>
       <main className="mx-12 my-8 decrease-margin flex flex-col item-center justify-center">
           <section id="about" ref={aboutRef}>
-            <About/>
+            <About contactRef ={contactRef}/>
           </section>
-
-          
           <section ref = {projectsRef} id="projects">
             <h2 className="font-bold text-2xl py-20 text-center">Projects</h2>
             <div className="w-2/3 increase-width card-parent gap-10 mx-auto max-w-screen-md">
@@ -110,9 +109,8 @@ function Home() {
               })}
             </div>
           </section>
-        
-          {/* end of experience section */}
       </main>
+      <Footer contactRef={contactRef}/>
     </>
   );
 }

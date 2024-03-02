@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import { Avatar, Button} from "@nextui-org/react"
 
-export default function About(){
+export default function About({contactRef}){
     const title = "Hi, I'm Mostafa Kamal".split("");
     const subTitle = "I love bringing ideas to life through coding".split("")
     return (
@@ -44,9 +44,21 @@ export default function About(){
                     ipsum nulla cillum incididunt ipsum consequat in.
                 </p>
                 
-                <a href="#contact">
-                    <Button className = "w-min px-5 py-5 text-md text-blue-700 border-blue-700 hover:bg-blue-700 hover:text-white" variant="ghost" radius="sm" color="">Contact Me</Button>  
-                </a>
+                
+                <Button 
+                    onClick = {() => {
+                        contactRef.current?.scrollIntoView({
+                        behavior:"smooth"
+                      })
+                    }}
+                    className = "w-min px-5 py-5 text-md text-blue-700 border-blue-700 hover:bg-blue-700 hover:text-white" 
+                    variant="ghost" 
+                    radius="sm" 
+                    color=""
+                >
+                    Contact Me
+                </Button>  
+              
                 <div className="flex gap-4">
                     <Avatar className="bg-transparent" src="./logo/pythonlogo.svg" name="Py" radius="sm"/>
                     <Avatar className="bg-transparent" src="./logo/javalogo.svg" name="Py" radius="sm"/>
