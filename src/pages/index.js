@@ -23,30 +23,30 @@ import {Container} from '@nextui-org/react'
 const projectList = [
   {
     title: "Chat App",
-    img: "/test.png",
+    img: "/chatappWebPic.png",
     description: "A real time chat applications that allows for easy communication between your friend group",
     githubLink: "https://github.com/mostafak2/chat-app",
     technologies: ["Java", "HTML", "CSS","JavaScript", "ReactJs", "Spring", "Websocket", "Docker"],
   },
   {
     title: "ELENA",
-    img: "/test.png",
+    img: "/elena.png",
     description: "Elevation Based Navigation System that finds the shortest path in a map with taking elevation into account",
-    githubLink: "https://github.com/mostafak2/chat-app",
+    githubLink: "https://github.com/mostafak2/compsci520_FinalProject",
     technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask", "GraphQL"],
   },
   {
     title: "Clog Monitor",
-    img: "/test.png",
-    description: "Juicy and flavorful raspberry, perfect for desserts.",
-    githubLink: "https://github.com/mostafak2/chat-app",
+    img: "/ClogMonitor.png",
+    description: "Application to view business logs and severity issues.",
+    githubLink: "https://github.com/mostafak2/Clog-Monitor",
     technologies: ["HTML", "CSS", "JavaScript", "ReactJs", "Spring", "Jenkins", "Cypress"],
   },
   {
     title: "RDT-Protocol",
-    img: "/test.png",
-    description: "Sour and zesty lemon, essential for refreshing drinks.",
-    githubLink: "https://github.com/mostafak2/chat-app",
+    img: "/rdt.jpg",
+    description: "Reliable Data Transfer or RDT-3.0 protocol written in python.",
+    githubLink: "https://github.com/mostafak2/Reliable-Data-Transfer",
     technologies: ["Python"],
   },
   
@@ -133,14 +133,19 @@ export default function Home() {
             return (
               <div className="card-child">
                 <motion.div whileHover={{ scale: 1.1, rotate: 2 }} whileTap={{scale:0.95, rotate:0}}>
-                  <Card className="cursor-pointer bg-gray-200 pt-6 px-6 max-h-80">
-                    <CardBody className="overflow-visible py-0">
+                  <Card className="cursor-pointer bg-gray-200">
+                      <Image
+                          alt="Card background"
+                          className="mb-0 object-cover rounded-xl"
+                          src={item.img} 
+                      />
+                    {/* <CardBody className="overflow-visible py-0">
                       <Image
                             alt="Card background"
                             className="mb-0 w-fullobject-cover rounded-xl"
                             src={item.img} 
                         />
-                    </CardBody>
+                    </CardBody> */}
                   </Card>
                 </motion.div>
                 <div>
