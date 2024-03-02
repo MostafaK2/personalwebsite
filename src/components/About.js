@@ -3,9 +3,9 @@ import { Avatar, Button, Divider, Link, link } from "@nextui-org/react"
 
 export default function About(){
     const title = "Hi, I'm Mostafa Kamal".split("");
-    const subTitle = "I'm a Masters student".split("")
+    const subTitle = "I love bringing ideas to life through coding".split("")
     return (
-        <div className="increase-width my-10 w-2/3 mx-auto flex flex-col justify-center items-center height-screen-vh gap-7">
+        <div className="increase-width mt-24 w-2/3 mx-auto flex flex-col justify-center items-center gap-7">
             <div className="flex flex-col gap-7">
                 <h1 className="text-6xl font-black about-title">
                     {title.map((el, i) => (

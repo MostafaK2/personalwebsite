@@ -17,7 +17,6 @@ import About from "@/components/About";
 import test from "next/image"
 
 
-import {Container} from '@nextui-org/react'
 // const inter = Inter({ subsets: ["latin"] });
 
 const projectList = [
@@ -83,47 +82,11 @@ const ExperienceData = [
   }
 ];
 import {Tabs, Tab} from "@nextui-org/react";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   return (
     <main className="mx-12 my-8 decrease-margin flex flex-col item-center justify-center">
-        <Navbar shouldHideOnScroll>
-          <NavbarBrand >
-            <p>Mostafa Kamal</p>
-          </NavbarBrand>
-          <NavbarContent className="hidden sm:flex gap-4" justify="center">
-            
-            <NavbarItem>
-              <Link href="#">
-                About Me
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link href="#projects">
-                Projects
-              </Link>
-            </NavbarItem>
-
-            <NavbarItem>
-              <Link href="#experience">
-                Experience
-              </Link>
-            </NavbarItem>
-
-            <NavbarItem>
-              <Link href="#contact">
-                Contact
-              </Link>
-            </NavbarItem>
-          </NavbarContent>
-          <NavbarContent justify="end">
-            <NavbarItem>
-              <Button as={Link} color="primary" href="#" variant="flat">
-                Resume
-              </Button>
-            </NavbarItem>
-          </NavbarContent>
-        </Navbar>
         <About/>
         {/* project section start */}
         <h2 id="projects" className="font-bold text-2xl py-20 text-center">Projects</h2>
