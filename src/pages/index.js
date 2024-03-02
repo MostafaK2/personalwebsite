@@ -36,7 +36,7 @@ const projectList = [
   },
   {
     title: "Clog Monitor",
-    img: "/projectPictures/ClogMonitor.png",
+    img: "/projectPictures/ClogMonitor.jpg",
     description: "Application to view business logs and severity issues.",
     githubLink: "https://github.com/mostafak2/Clog-Monitor",
     technologies: ["HTML", "CSS", "JavaScript", "ReactJs", "Spring", "Jenkins", "Cypress"],
@@ -157,8 +157,8 @@ export default function Home() {
                   </CardHeader>
                   <CardBody>
                     <ul className="list-disc">
-                    {item.description.map(temp => (
-                      <li>{temp}</li>
+                    {item.description.map((temp,index) => (
+                      <li key={index}>{temp}</li>
                     ))}
                     </ul>
                   </CardBody>
