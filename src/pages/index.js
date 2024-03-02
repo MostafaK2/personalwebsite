@@ -1,23 +1,13 @@
 import { Inter } from "next/font/google";
+// const inter = Inter({ subsets: ["latin"] });
+
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
-import {Chip} from "@nextui-org/react";
-import {Divider} from "@nextui-org/react";
-import {Avatar} from "@nextui-org/react";
-
-import {motion} from "framer-motion";
-
-// components
+import ExperienceCard from "@/components/ExperienceCard";
+import ProjectCard from "@/components/ProjectCard";
 import About from "@/components/About";
 
-
-
-// assets
-import test from "next/image"
-
-
-// const inter = Inter({ subsets: ["latin"] });
+import { useRef } from "react";
+import NavBar from "@/components/NavBar";
 
 const projectList = [
   {
@@ -80,31 +70,35 @@ const ExperienceData = [
     technologies: []
   }
 ];
-import {Tabs, Tab} from "@nextui-org/react";
-import NavBar from "@/components/NavBar";
-import ExperienceCard from "@/components/ExperienceCard";
-import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
+  
   return (
     <main className="mx-12 my-8 decrease-margin flex flex-col item-center justify-center">
-        <About/>
+        <section id="about">
+          <About/>
+        </section>
+        
         <section id="projects">
           <h2 className="font-bold text-2xl py-20 text-center">Projects</h2>
-          <div className="w-2/3 increase-width card-parent gap-10 mx-auto">
+          <div className="w-2/3 increase-width card-parent gap-10 mx-auto max-w-screen-md">
             {projectList.map((item, index) => {
               return (
-                <ProjectCard item={item}/>
+                <React.Fragment key={index}>
+                  <ProjectCard item={item}/>
+                </React.Fragment>   
             )})}
           </div>
         </section>
-        
+        {/* max-w-screen-md => max width 750x*/}
         <section id="experience">
           <h2 id="experience" className="font-bold text-2xl py-20 text-center">Experience</h2>
-          <div className="w-2/3 gap-11 mx-auto increase-width">
+          <div className="w-2/3 gap-11 mx-auto increase-width max-w-screen-md">
             {ExperienceData.map((item, index) => {
               return (
-                <ExperienceCard item={item}/>
+                <React.Fragment key={index}>
+                  <ExperienceCard item={item}/>
+                </React.Fragment> 
               )
             })}
           </div>

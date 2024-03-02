@@ -1,6 +1,9 @@
 import {Card, Link, Avatar,Image, Divider, Chip} from "@nextui-org/react";
-import {motion} from "framer-motion"
+import {motion, useScroll, useTransform} from "framer-motion"
+import { useRef } from "react";
 export default function ProjectCard({item}){
+    
+
     return (
         <div className="card-child">
             <motion.div whileHover={{ scale: 1.1, rotate: 2 }} whileTap={{scale:0.95, rotate:0}}>
