@@ -76,7 +76,7 @@ const ExperienceData = [
     description: [
       "I did this",
       "I did that",
-      "I did those"
+      "I did thos sde"
     ],
     technologies: []
   }
