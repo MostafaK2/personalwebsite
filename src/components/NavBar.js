@@ -1,5 +1,14 @@
 import {Navbar, NavbarBrand,NavbarItem, NavbarContent, Link, Button, Avatar} from '@nextui-org/react'
-export default function NavBar(){
+import {Tabs, Tab} from "@nextui-org/react"
+
+export default function NavBar({aboutRef, projectsRef, experienceRef, contactRef}){
+
+    const scrollToView = (ref) => {
+      ref.current?.scrollIntoView({
+        behavior:"smooth"
+      })
+    }
+
     return (
     <Navbar className='bg-gray-200 rounded-b-2xl' shouldHideOnScroll>
         <NavbarBrand className='flex flex-row gap-2'>
@@ -14,27 +23,27 @@ export default function NavBar(){
             <Avatar src='./logo/githublogo.svg' size='sm' alt='git'></Avatar>
           </Link>
         </NavbarBrand>
+
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
-          
           <NavbarItem>
-            <Link className = "text-md text-black" underline="hover" href="#">
+            <Link onClick = {()=>{scrollToView(aboutRef)}} className = "cursor-pointer text-md text-black" underline="hover">
               About Me
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link className = "text-md text-black" underline="hover" href="#projects">
+            <Link onClick = {()=>{scrollToView(projectsRef)}} className = "cursor-pointer text-md text-black" underline="hover">
               Projects
             </Link>
           </NavbarItem>
 
           <NavbarItem>
-            <Link className = "text-md text-black" underline="hover"  href="#experience">
+            <Link onClick = {()=>{scrollToView(experienceRef)}} className = "cursor-pointer text-md text-black" underline="hover">
               Experience
             </Link>
           </NavbarItem>
             
           <NavbarItem>
-            <Link className = "text-md text-black" underline="hover" href="#contact">
+            <Link onClick = {()=>{scrollToView(contactRef)}} className = "cursor-pointer text-md text-black" underline="hover">
               Contact
             </Link>
           </NavbarItem>

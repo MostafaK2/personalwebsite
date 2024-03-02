@@ -1,7 +1,11 @@
-import { Avatar, Link } from "@nextui-org/react"
-import React from "react"
+import { Avatar, Link } from "@nextui-org/react";
+import React from "react";
+import { useSelector } from 'react-redux';
+
 
 export default function Footer() {
+
+    // const contactRef = useSelector((state) => state.refs.contactRef);
     return (
         <footer id="contact" className='bg-gray-200 rounded-t-2xl'>
             <div className="flex flex-col justify-center items-center py-20 gap-2">
