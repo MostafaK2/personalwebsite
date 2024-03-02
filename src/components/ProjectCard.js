@@ -1,5 +1,5 @@
 import {Card, Link, Avatar,Image, Divider, Chip} from "@nextui-org/react";
-import {motion, useScroll, useTransform} from "framer-motion"
+import {motion} from "framer-motion"
 
 export default function ProjectCard({item}){
     return (
@@ -26,9 +26,9 @@ export default function ProjectCard({item}){
             </div>
             <div className="flex flex-wrap gap-2 pt-3">
                 {item.technologies.map(item => (
-                <motion.div whileHover={{ scale: 1.1}} >
-                    <Chip className="cursor-pointer">{item}</Chip>
-                </motion.div>
+                    <motion.div whileHover={{ scale: 1.1}} >
+                        <Chip className="cursor-pointer">{item}</Chip>
+                    </motion.div>
                 
                 ))}
             </div>

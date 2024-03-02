@@ -20,7 +20,7 @@ export default function ExperienceCard({item}){
                 <CardBody>
                     <ul className="list-disc">
                     {item.description.map((temp,index) => (
-                    <li key={index}>{temp}</li>
+                        <li key={index}>{temp}</li>
                     ))}
                     </ul>
                 </CardBody>

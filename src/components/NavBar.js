@@ -11,10 +11,15 @@ export default function NavBar({aboutRef, projectsRef, experienceRef, contactRef
     return (
     <Navbar className='bg-gray-200 rounded-b-2xl' shouldHideOnScroll>
         <NavbarBrand className='flex flex-row gap-2'>
-          <Avatar isBordered radius="sm" color="success" className='text-md text-black' alt='MK' 
-          src='/profile-pic.jpeg' size='md'
-          >
-          </Avatar>
+          <Avatar 
+            isBordered 
+            radius="sm" 
+            color="success" 
+            className='text-md text-black' 
+            alt='MK' 
+            src='/profile-pic.jpeg' 
+            size='md'
+          />
           <Link isExternal href="https://www.linkedin.com/in/mostafa-kamal-5622331b7/"> 
             <Avatar src='./logo/linkedin.svg' size='sm' alt='git'></Avatar>
           </Link>
@@ -50,8 +55,8 @@ export default function NavBar({aboutRef, projectsRef, experienceRef, contactRef
         </NavbarContent>
         <NavbarContent justify="end">
           <NavbarItem>
-          <Button as={Link} href="#" className = "w-min px-5 py-5 text-md text-blue-700 border-blue-700 hover:bg-blue-700 hover:text-white" variant="ghost" radius="sm" color="">Resume</Button>
+            <Button isExternal as={Link} href="/files/resume.pdf" className = "w-min px-5 py-5 text-md text-blue-700 border-blue-700 hover:bg-blue-700 hover:text-white" variant="ghost" radius="sm" color="">Resume</Button>
           </NavbarItem>
         </NavbarContent>
-      </Navbar>)
+    </Navbar>)
 }
