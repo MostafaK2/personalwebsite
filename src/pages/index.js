@@ -22,33 +22,32 @@ import test from "next/image"
 const projectList = [
   {
     title: "Chat App",
-    img: "/chatappWebPic.png",
+    img: "/projectPictures/chatappWebPic.png",
     description: "A real time chat applications that allows for easy communication between your friend group",
     githubLink: "https://github.com/mostafak2/chat-app",
     technologies: ["Java", "HTML", "CSS","JavaScript", "ReactJs", "Spring", "Websocket", "Docker"],
   },
   {
     title: "ELENA",
-    img: "/elena.png",
+    img: "/projectPictures/elena.png",
     description: "Elevation Based Navigation System that finds the shortest path in a map with taking elevation into account",
     githubLink: "https://github.com/mostafak2/compsci520_FinalProject",
     technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask", "GraphQL"],
   },
   {
     title: "Clog Monitor",
-    img: "/ClogMonitor.png",
+    img: "/projectPictures/ClogMonitor.png",
     description: "Application to view business logs and severity issues.",
     githubLink: "https://github.com/mostafak2/Clog-Monitor",
     technologies: ["HTML", "CSS", "JavaScript", "ReactJs", "Spring", "Jenkins", "Cypress"],
   },
   {
     title: "RDT-Protocol",
-    img: "/rdt.jpg",
+    img: "/projectPictures/rdt.jpg",
     description: "Reliable Data Transfer or RDT-3.0 protocol written in python.",
     githubLink: "https://github.com/mostafak2/Reliable-Data-Transfer",
     technologies: ["Python"],
   },
-  
 ];
 
 const ExperienceData = [
@@ -116,7 +115,7 @@ export default function Home() {
                     <h4 className="font-bold text-lg project-title">{item.title}</h4>
                     <Divider className="my-4 w-1/2" />
                     <Link isExternal href={item.githubLink}> 
-                      <Avatar isBordered className="cursor-pointer" name="git" src="/githublogo.svg"></Avatar>
+                      <Avatar isBordered className="cursor-pointer" name="git" src="/logo/githublogo.svg"></Avatar>
                     </Link>
                   </div>
                   <div>

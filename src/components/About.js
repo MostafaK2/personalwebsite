@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import { Avatar, Button, Divider, Link, link } from "@nextui-org/react"
+import { Avatar, Button} from "@nextui-org/react"
 
 export default function About(){
     const title = "Hi, I'm Mostafa Kamal".split("");
@@ -47,11 +47,11 @@ export default function About(){
                     <Button className = "w-min px-5 py-5 text-md text-blue-700 border-blue-700 hover:bg-blue-700 hover:text-white" variant="ghost" radius="sm" color="">Contact Me</Button>  
                 </a>
                 <div className="flex gap-4">
-                    <Avatar className="bg-transparent" src="./pythonlogo.svg" name="Py" radius="sm"/>
-                    <Avatar className="bg-transparent" src="./javalogo.svg" name="Py" radius="sm"/>
-                    <Avatar className="bg-transparent" src="./reactlogo.svg" name="Py" radius="sm"/>
-                    <Avatar className="bg-transparent" src="./springlogo.svg" name="Py" radius="sm"/>
-                    <Avatar className="bg-transparent" src="./jenkinslogo.svg" name="Py" radius="sm"/>
+                    <Avatar className="bg-transparent" src="./logo/pythonlogo.svg" name="Py" radius="sm"/>
+                    <Avatar className="bg-transparent" src="./logo/javalogo.svg" name="Py" radius="sm"/>
+                    <Avatar className="bg-transparent" src="./logo/reactlogo.svg" name="Py" radius="sm"/>
+                    <Avatar className="bg-transparent" src="./logo/springlogo.svg" name="Py" radius="sm"/>
+                    <Avatar className="bg-transparent" src="./logo/jenkinslogo.svg" name="Py" radius="sm"/>
                 </div>          
             </div>
             
