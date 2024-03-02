@@ -82,98 +82,34 @@ const ExperienceData = [
 ];
 import {Tabs, Tab} from "@nextui-org/react";
 import NavBar from "@/components/NavBar";
+import ExperienceCard from "@/components/ExperienceCard";
+import ProjectCard from "@/components/ProjectCard";
 
 export default function Home() {
   return (
     <main className="mx-12 my-8 decrease-margin flex flex-col item-center justify-center">
         <About/>
-        {/* project section start */}
-        <h2 id="projects" className="font-bold text-2xl py-20 text-center">Projects</h2>
-        <div className="w-2/3 increase-width card-parent gap-10 mx-auto">
-          {projectList.map((item, index) => {
-
-            return (
-              <div className="card-child">
-                <motion.div whileHover={{ scale: 1.1, rotate: 2 }} whileTap={{scale:0.95, rotate:0}}>
-                  <Card className="cursor-pointer bg-gray-200">
-                      <Image
-                          alt="Card background"
-                          className="mb-0 object-cover rounded-xl"
-                          src={item.img} 
-                      />
-                    {/* <CardBody className="overflow-visible py-0">
-                      <Image
-                            alt="Card background"
-                            className="mb-0 w-fullobject-cover rounded-xl"
-                            src={item.img} 
-                        />
-                    </CardBody> */}
-                  </Card>
-                </motion.div>
-                <div>
-                  <div className="flex flex-row gap-4 justify-between">
-                    <h4 className="font-bold text-lg project-title">{item.title}</h4>
-                    <Divider className="my-4 w-1/2" />
-                    <Link isExternal href={item.githubLink}> 
-                      <Avatar isBordered className="cursor-pointer" name="git" src="/logo/githublogo.svg"></Avatar>
-                    </Link>
-                  </div>
-                  <div>
-                    <p>{item.description}</p>
-                  </div>
-                  <div className="flex flex-wrap gap-2 pt-3">
-                    {item.technologies.map(item => (
-                      <motion.div whileHover={{ scale: 1.1}} >
-                        <Chip className="cursor-pointer">{item}</Chip>
-                      </motion.div>
-                      
-                    ))}
-                  </div>
-                </div>
-              </div>
-          )})}
-        </div>
-        {/* end of project section */}
-        {/* {experience section} */}
-        <h2 id="experience" className="font-bold text-2xl py-20 text-center">Experience</h2>
-        <div className="w-2/3 gap-11 mx-auto increase-width">
-          {ExperienceData.map((item, index) => {
-            return (
-              <div className="mx-auto">
-                
-                <Card>
-                  <CardHeader className="flex flex-col justify-center">
-                    <div>
-                      <p className="font-bold text-lg">{item.company_name}{", "}{item.location}</p>
-                    </div>
-                    <div>
-                      <p>{item.role}</p>  
-                    </div>
-                    <div className="flex flex-row gap-3 items-center">
-                        <Chip className = "border-blue-700" color={"primary"} variant="dot" radius="sm">{item.start_date}</Chip>
-                        <Chip className = "border-grey-100" color={"primary"} variant="bordered" radius="sm">{"-"}</Chip>
-                        <Chip className = "border-blue-700" color={"primary"} variant="dot" radius="sm">{item.end_date}</Chip>  
-                      </div>
-                  </CardHeader>
-                  <CardBody>
-                    <ul className="list-disc">
-                    {item.description.map((temp,index) => (
-                      <li key={index}>{temp}</li>
-                    ))}
-                    </ul>
-                  </CardBody>
-                </Card>
-                
-                <div className="flex flex-wrap gap-2 pt-3">
-                  {item.technologies.map(item => (
-                    <Chip>{item}</Chip>
-                  ))}
-                </div>
-                <Divider className="my-4 w-full" />
-              </div>
-            )
-          })}
-        </div>
+        <section id="projects">
+          <h2 className="font-bold text-2xl py-20 text-center">Projects</h2>
+          <div className="w-2/3 increase-width card-parent gap-10 mx-auto">
+            {projectList.map((item, index) => {
+              return (
+                <ProjectCard item={item}/>
+            )})}
+          </div>
+        </section>
+        
+        <section id="experience">
+          <h2 id="experience" className="font-bold text-2xl py-20 text-center">Experience</h2>
+          <div className="w-2/3 gap-11 mx-auto increase-width">
+            {ExperienceData.map((item, index) => {
+              return (
+                <ExperienceCard item={item}/>
+              )
+            })}
+          </div>
+        </section>
+       
         {/* end of experience section */}
     </main>
   );
