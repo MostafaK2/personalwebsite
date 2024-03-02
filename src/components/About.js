@@ -1,12 +1,12 @@
 import {motion} from "framer-motion";
 import { Avatar, Button} from "@nextui-org/react"
 
-export default function About({contactRef}){
+export default function About({contactRef, aboutRef}){
     const title = "Hi, I'm Mostafa Kamal".split("");
     const subTitle = "I love bringing ideas to life through coding".split("")
     return (
-        
-        <div className="max-w-screen-md increase-width mt-24 w-2/3 mx-auto flex flex-col justify-center items-center gap-7">
+        <section id="about" ref={aboutRef}>
+            <div className="max-w-screen-md increase-width mt-24 w-2/3 mx-auto flex flex-col justify-center items-center gap-7">
             <div className="flex flex-col gap-7">
                 <h1 className="text-6xl font-black about-title">
                     {title.map((el, i) => (
@@ -67,6 +67,7 @@ export default function About({contactRef}){
                     <Avatar className="bg-transparent" src="./logo/jenkinslogo.svg" name="Py" radius="sm"/>
                 </div>          
             </div>
-        </div>
-    )
-}
+            </div>
+        </section>
+        
+)}

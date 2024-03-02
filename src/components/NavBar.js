@@ -1,5 +1,4 @@
 import {Navbar, NavbarBrand,NavbarItem, NavbarContent, Link, Button, Avatar} from '@nextui-org/react'
-import {Tabs, Tab} from "@nextui-org/react"
 
 export default function NavBar({aboutRef, projectsRef, experienceRef, contactRef}){
 
