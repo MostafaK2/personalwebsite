@@ -36,7 +36,7 @@ const projectList = [
   },
   {
     title: "Clog Monitor",
-    img: "/projectPictures/ClogMonitor.jpg",
+    img: "/projectPictures/clogMonitor.png",
     description: "Application to view business logs and severity issues.",
     githubLink: "https://github.com/mostafak2/Clog-Monitor",
     technologies: ["HTML", "CSS", "JavaScript", "ReactJs", "Spring", "Jenkins", "Cypress"],
