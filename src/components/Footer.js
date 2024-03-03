@@ -9,7 +9,7 @@ export default function Footer({contactRef}) {
                 <Avatar radius = "sm" size="lg" src="./profile-pic.jpeg"/>
                 <p className="font-bold">Mostafa Kamal </p>
                 <p className="font-bold">Lets Keep in touch</p>
-                <Link>Mostafajunayed20@gmail.com</Link>
+                <Link href = "mailto: Mostafajunayed20@gmail.com">Mostafajunayed20@gmail.com</Link>
                 <nav>
                     <div className="flex flex-row gap-4">
                         <Link isExternal href="https://www.linkedin.com/in/mostafa-kamal-5622331b7/"> 
