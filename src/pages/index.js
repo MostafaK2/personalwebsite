@@ -2,14 +2,16 @@ import { Inter } from "next/font/google";
 // const inter = Inter({ subsets: ["latin"] });
 
 import React from "react";
-import ExperienceCard from "@/components/ExperienceCard";
-import ProjectCard from "@/components/ProjectCard";
+// import ExperienceCard from "@/components/ExperienceCard";
+// import ProjectCard from "@/components/ProjectCard";
 import About from "@/components/About";
 import { useRef } from "react";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Projects from "@/components/presentation/Projects";
 import Experiences from "@/components/presentation/Experiences";
+
+import Head from "next/head";
 
 
 
@@ -21,6 +23,9 @@ function Home() {
   
   return (
     <>
+      <Head>
+        <title>Mostafa Kamal's Portfolio</title>
+      </Head>
       <NavBar aboutRef={aboutRef} projectsRef={projectsRef}experienceRef={experienceRef} contactRef={contactRef}/>
       <main className="mx-12 my-8 decrease-margin flex flex-col item-center justify-center">
           

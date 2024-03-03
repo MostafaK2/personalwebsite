@@ -1,5 +1,5 @@
 import {motion} from "framer-motion";
-import { Avatar, Button} from "@nextui-org/react"
+import { Avatar, Button, Tooltip} from "@nextui-org/react"
 
 export default function About({contactRef, aboutRef}){
     const title = "Hi, I'm Mostafa Kamal".split("");
@@ -38,10 +38,9 @@ export default function About({contactRef, aboutRef}){
                         </motion.span>
                     ))}
                 </h2>
-                <p className="text-lg">lorem eiusmod exercitation do ea amet ad nostrud. 
-                    Lorem laborum dolor sint esse. Est reprehenderit ullamco pariatur et magna pariatur quis tempor. 
-                    Reprehenderit culpa enim ut sunt excepteur id. Tempor velit nisi est et exercitation laboris enim
-                    ipsum nulla cillum incididunt ipsum consequat in.
+                <p className="text-lg">I'm not just a software developer but rather I'm a storyteller, a problem-solver, and an eternal learner.
+                  My journey in computer science has been a captivating adventure filled with challenges and triumphs.
+                   Each experience has sculpted me into the professional I am today. 
                 </p>
                 
                 
@@ -60,11 +59,22 @@ export default function About({contactRef, aboutRef}){
                 </Button>  
               
                 <div className="flex gap-4">
-                    <Avatar className="bg-transparent" src="./logo/pythonlogo.svg" name="Py" radius="sm"/>
-                    <Avatar className="bg-transparent" src="./logo/javalogo.svg" name="Py" radius="sm"/>
-                    <Avatar className="bg-transparent" src="./logo/reactlogo.svg" name="Py" radius="sm"/>
-                    <Avatar className="bg-transparent" src="./logo/springlogo.svg" name="Py" radius="sm"/>
-                    <Avatar className="bg-transparent" src="./logo/jenkinslogo.svg" name="Py" radius="sm"/>
+                    <Tooltip placement ="bottom" showArrow={false} content="Python">
+                        <Avatar className="bg-transparent" src="./logo/pythonlogo.svg" name="Py" radius="sm"/>
+                    </Tooltip>
+                    
+                    <Tooltip placement ="bottom" showArrow={false} content="Java">
+                        <Avatar className="bg-transparent" src="./logo/javalogo.svg" name="Py" radius="sm"/>
+                    </Tooltip>
+                    <Tooltip placement ="bottom" showArrow={false} content="React">
+                        <Avatar className="bg-transparent" src="./logo/reactlogo.svg" name="Py" radius="sm"/>
+                    </Tooltip>
+                    <Tooltip placement ="bottom" showArrow={false} content="Spring">
+                        <Avatar className="bg-transparent" src="./logo/springlogo.svg" name="Py" radius="sm"/>
+                    </Tooltip>
+                    <Tooltip placement ="bottom" showArrow={false} content="Jenkins">
+                        <Avatar className="bg-transparent" src="./logo/jenkinslogo.svg" name="Py" radius="sm"/>
+                    </Tooltip>
                 </div>          
             </div>
             </div>
