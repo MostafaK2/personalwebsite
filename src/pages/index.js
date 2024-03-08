@@ -13,28 +13,30 @@ import Experiences from "@/components/presentation/Experiences";
 
 import Head from "next/head";
 
-
-
 function Home() {
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
-  
+
   return (
     <>
       <Head>
         <title>Mostafa Kamal's Portfolio</title>
       </Head>
-      <NavBar aboutRef={aboutRef} projectsRef={projectsRef}experienceRef={experienceRef} contactRef={contactRef}/>
+      <NavBar
+        aboutRef={aboutRef}
+        projectsRef={projectsRef}
+        experienceRef={experienceRef}
+        contactRef={contactRef}
+      />
       <main className="mx-12 my-8 decrease-margin flex flex-col item-center justify-center">
-          
-          <About contactRef ={contactRef} aboutRef={aboutRef}/>
-          <Projects projectsRef={projectsRef}/>
-          <Experiences experienceRef={experienceRef}/>
-          
-          {/* max-w-screen-md => max width 750x*/}
-          {/* <section ref = {projectsRef} id="projects">
+        <About contactRef={contactRef} aboutRef={aboutRef} />
+        <Projects projectsRef={projectsRef} />
+        <Experiences experienceRef={experienceRef} />
+
+        {/* max-w-screen-md => max width 750x*/}
+        {/* <section ref = {projectsRef} id="projects">
             <h2 className="font-bold text-2xl py-20 text-center">Projects</h2>
             <div className="w-2/3 increase-width card-parent gap-10 mx-auto max-w-screen-md">
               {projectList.map((item, index) => {
@@ -57,9 +59,8 @@ function Home() {
               })}
             </div>
           </section> */}
-          
       </main>
-      <Footer contactRef={contactRef}/>
+      <Footer contactRef={contactRef} />
     </>
   );
 }
