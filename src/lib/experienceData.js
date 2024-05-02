@@ -6,7 +6,7 @@ const EXPERIENCE_DATA = [
     start_date: "2024",
     end_date: "Present",
     description:
-      "I am actively contributing to the development of a dynamic and innovative mobile and web application, seamlessly integrating it with Google APIs; the core technologies at the heart of this startup include Node.js for server-side development, React Native for cross-platform mobile application development, and DynamoDB for efficient and scalable NoSQL database management",
+      "I am actively contributing to the development of a dynamic and innovative mobile and web application, seamlessly integrating it with Google APIs; the core technologies at the heart of this startup include Node.js for server-side development, React Native for cross-platform mobile application development, and Firebase for efficient and scalable NoSQL database management",
     technologies: ["React", "Node", "React.Native", "DynamoDb"],
   },
   {
