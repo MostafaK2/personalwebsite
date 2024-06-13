@@ -1,17 +1,7 @@
 const EXPERIENCE_DATA = [
   {
-    company_name: "Stealth Startup",
-    role: "Software Engineer",
-    location: "Remote",
-    start_date: "2024",
-    end_date: "Present",
-    description:
-      "I am actively contributing to the development of a dynamic and innovative mobile and web application, seamlessly integrating it with Google APIs; the core technologies at the heart of this startup include Node.js for server-side development, React Native for cross-platform mobile application development, and Firebase for efficient and scalable NoSQL database management",
-    technologies: ["React", "Node", "React.Native", "DynamoDb"],
-  },
-  {
     company_name: "Scale AI",
-    role: "AI Trainer",
+    role: "AI Trainer - Advanced Coder",
     location: "Remote",
     start_date: "2024",
     end_date: "Present",
