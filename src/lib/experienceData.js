@@ -1,7 +1,7 @@
 const EXPERIENCE_DATA = [
   {
-    company_name: "Scale AI",
-    role: "AI Trainer - Advanced Coder",
+    company_name: "Outlier AI",
+    role: "AI Trainer",
     location: "Remote",
     start_date: "2024",
     end_date: "Present",
